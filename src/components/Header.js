@@ -5,6 +5,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from 'react-router-dom';
 import { useStateValue } from "../StateProvider";
 import { auth } from '../firebase';
+import logo from "../assets/amazon_logo.png";
 
 export default function Header() {
 
@@ -20,7 +21,7 @@ export default function Header() {
         <div className='header'>
             
             <Link to='/'>
-                <img src="" className='header-logo' alt="img-header-logo" />
+                <img src={logo} className='header-logo' alt="img-header-logo" />
             </Link>
             
             <div className='header-search'>
@@ -31,7 +32,7 @@ export default function Header() {
             <div className='header-nav'>
                 <Link to={!user && '/login'}>
                     <div className='header-nav-option' onClick={handleAuth}>
-                        <span className='header-nav-option-line1'> Hello User </span>
+                        <span className='header-nav-option-line1'> Hello {!user ? 'Guest' : user.email} </span>
                         <span className='header-nav-option-line2'>
                             {user ? 'Sign Out' : 'Sign In'}     
                         </span>
