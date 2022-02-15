@@ -18,6 +18,7 @@
 
 .checkout-product-info-rating {
   display: flex;
+  color: #ffa41c;
 }
 
 .checkout-product-btn-remove {

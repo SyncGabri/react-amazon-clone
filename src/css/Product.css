@@ -23,6 +23,7 @@
 
 .product-info-rating {
   display: flex;
+  color: #ffa41c;
 }
 
 .product-image {
