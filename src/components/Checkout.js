@@ -3,6 +3,7 @@ import '../css/Checkout.css';
 import { useStateValue } from '../StateProvider';
 import CheckoutProduct from './CheckoutProduct';
 import Subtotal from './Subtotal';
+import bannerAd from '../assets/amazon_ad.png';
 
 function Checkout() {
 
@@ -11,7 +12,7 @@ function Checkout() {
     return (
         <div className='checkout'>
             <div className='checkout-left'>
-                <img className='checkout-left-ad' src='' alt='img-ad'/>
+                <img className='checkout-left-ad' src={bannerAd} alt='img-ad'/>
                 <div>
                     <h3>Hello, {user?.email}</h3>
                     <h2 className='checkout-left-title'>

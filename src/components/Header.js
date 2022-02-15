@@ -5,7 +5,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from 'react-router-dom';
 import { useStateValue } from "../StateProvider";
 import { auth } from '../firebase';
-import logo from "../assets/amazon_logo.png";
+import logo from "../assets/amazon_logo_white.png";
 
 export default function Header() {
 

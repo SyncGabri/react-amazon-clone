@@ -29,7 +29,7 @@ function Product({id, title, image, price, rating}) {
                     <strong> {price} </strong>
                 </p>
                 <div className='product-info-rating'>
-                    {Array(rating).fill().map((_, i) => (<p> <RatingStar /> </p>))}
+                    {Array(rating).fill().map((_, i) => (<p><RatingStar /></p>))}
                 </div>
             </div>
             <img className='product-image' src={image} alt='img-product'/>

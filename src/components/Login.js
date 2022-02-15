@@ -3,6 +3,8 @@ import { Link, useHistory } from 'react-router-dom';
 import '../css/Login.css';
 import { auth } from '../firebase';
 
+import logo from "../assets/amazon_logo_black.png";
+
 function Login() {
     const history = useHistory();
     const [email, setEmail]         = useState('');
@@ -36,7 +38,7 @@ function Login() {
     return (
         <div className='login'>
             <Link to='/'>
-                <img className='login-logo' scr='' alt='img-logo' />
+                <img className='login-logo' src={logo} alt='img-logo' />
             </Link>
             <div className='login-container'>
                 <h1>Sign In</h1>
