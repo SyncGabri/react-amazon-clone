@@ -32,16 +32,18 @@ export default function Header() {
             <div className='header-nav'>
                 <Link to={!user && '/login'}>
                     <div className='header-nav-option' onClick={handleAuth}>
-                        <span className='header-nav-option-line1'> Hello {!user ? 'Guest' : user.email} </span>
+                        <span className='header-nav-option-line1'> Hello {!user ? 'Guest' : user?.email.split('@')[0]} </span>
                         <span className='header-nav-option-line2'>
                             {user ? 'Sign Out' : 'Sign In'}     
                         </span>
                     </div>
                 </Link>
-                <div className='header-nav-option'>
-                    <span className='header-nav-option-line1'> Returns </span>
-                    <span className='header-nav-option-line2'> Orders </span>
-                </div>
+                <Link to='/orders'>
+                    <div className='header-nav-option'>
+                        <span className='header-nav-option-line1'> Returns </span>
+                        <span className='header-nav-option-line2'> Orders </span>
+                    </div>
+                </Link>
                 
                 <div className='header-nav-option'>
                     <span className='header-nav-option-line1'> Your </span>

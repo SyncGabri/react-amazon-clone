@@ -14,7 +14,7 @@ function Checkout() {
             <div className='checkout-left'>
                 <img className='checkout-left-ad' src={bannerAd} alt='img-ad'/>
                 <div>
-                    <h3>Hello, {user?.email}</h3>
+                    <h3>Hello, {!user ? 'Guest' : user?.email.split('@')[0]}</h3>
                     <h2 className='checkout-left-title'>
                         Your shopping basket
                     </h2>
